@@ -1,0 +1,35 @@
+import AssignedVehicleCard from "@/components/AssignedVehicleCard";
+import React from "react";
+import { Ellipsis } from "lucide-react";
+import TripDetailsCard from "@/components/Tripdetails";
+import Map from "@/components/Map";
+
+const Dashboard = () => {
+  return (
+  <main className="min-h-screen bg-[#F6F6F6] pt-6 relative">
+  <div className="px-4 sm:px-6 lg:px-8 mb-6">
+    <h1 className="space-x-2">
+      <span className="text-[#063510] font-medium">Trips List/</span>
+      <span className="font-light text-[#10101080]">Trip 001</span>
+    </h1>
+  </div>
+
+  {/* Buttons container moved down with margin-top, aligned right */}
+  <div className="flex justify-end px-4 sm:px-6 lg:px-8 mt-[-2rem] mb-4 space-x-3">
+    <button className="bg-[#101010] text-white px-4 py-2 rounded-md text-xs cursor-pointer">
+      Re- Route Trip
+    </button>
+    <button className="px-2 py-1 rounded-md bg-white cursor-pointer">
+      <Ellipsis className="text-[#101010]" />
+    </button>
+  </div>
+
+  <AssignedVehicleCard />
+  <TripDetailsCard />
+  <Map />
+</main>
+
+  );
+};
+
+export default Dashboard;

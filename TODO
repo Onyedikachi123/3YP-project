@@ -1,0 +1,25 @@
+import React from 'react';
+import Badge from '@/components/Badge';
+
+export default function VehicleCard() {
+  return (
+    <div className="bg-white rounded-lg p-4 shadow-sm">
+      <div className="flex justify-between items-start mb-4">
+        <div>
+          <h3 className="text-lg font-semibold">Vehicle Details</h3>
+          <p className="text-sm text-gray-500">ID: #VH12819</p>
+        </div>
+        <Badge label="On Route" variant="green" />
+      </div>
+
+      <div className="text-sm text-gray-700 space-y-2">
+        <p><strong>Type:</strong> Toyota Hiace</p>
+        <p><strong>Plate Number:</strong> KSF 289 YY</p>
+        <p><strong>VIN:</strong> 4Y1SL65848Z411439</p>
+        <p><strong>Capacity:</strong> 15</p>
+        <p><strong>Assigned Date:</strong> 23-Jan-2024</p>
+        <p><strong>Station:</strong> Island Garage</p>
+      </div>
+    </div>
+  );
+}
