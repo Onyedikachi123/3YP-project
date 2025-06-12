@@ -7,33 +7,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GetStarted from "@/components/GetStarted";
 
-
 // --- Animation variants for the road ---
-const roadVariants = {
-  animate: {
-    x: ["0%", "-30%"], // Move road to the left
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 8,
-        ease: "linear",
-      },
-    },
-  },
-};
+
 
 const Home = () => {
   return (
     <main className="w-full min-h-screen bg-white flex flex-col">
       {/* Navbar */}
-     <Navbar />
+      <Navbar />
 
       {/* Hero Section */}
       <Hero />
 
       {/* How to get started */}
-     <GetStarted />
+      <GetStarted />
 
       {/* Footer */}
       <Footer />

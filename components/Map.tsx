@@ -3,25 +3,27 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useMap } from "react-leaflet";
+import type * as LType from "leaflet"; // ✅ FIX 1: Import Leaflet types for type safety
 
-const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then(mod => mod.Marker), { ssr: false });
-const Popup = dynamic(() => import("react-leaflet").then(mod => mod.Popup), { ssr: false });
+const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
 
-let L: any;
+let L: typeof LType; // ✅ FIX 2: Explicitly type L instead of using `any`
 
 const LiveMap = () => {
   const [position, setPosition] = useState<{ lat: number; lng: number } | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"overview" | "adminLogs">("overview"); // ✅ Added
+  const [activeTab, setActiveTab] = useState<"overview" | "adminLogs">("overview");
 
   useEffect(() => {
     const init = async () => {
       try {
-        L = require("leaflet");
+        const leaflet = await import("leaflet"); // ✅ FIX 3: Use dynamic `import()` instead of `require()`
+        L = leaflet;
 
-        delete (L.Icon.Default.prototype as any)._getIconUrl;
+        delete (L.Icon.Default.prototype as unknown as { _getIconUrl: unknown })._getIconUrl; // ✅ FIX 4: Avoid `any`
         L.Icon.Default.mergeOptions({
           iconRetinaUrl: "/leaflet/marker-icon-2x.png",
           iconUrl: "/leaflet/marker-icon.png",
@@ -89,7 +91,6 @@ const LiveMap = () => {
     return null;
   };
 
-  // ✅ Tab rendering
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="flex space-x-6 border-b border-gray-200 mb-4">
@@ -111,7 +112,6 @@ const LiveMap = () => {
         </button>
       </div>
 
-      {/* ✅ Tab content */}
       {activeTab === "overview" && (
         <>
           <h3 className="text-base font-semibold mb-2">Live Operation Map</h3>
@@ -142,7 +142,7 @@ const LiveMap = () => {
 
       {activeTab === "adminLogs" && (
         <div className="text-sm text-gray-700">
-          <p>Admin Logs will appear here.</p> {/* ✅ Admin Logs placeholder */}
+          <p>Admin Logs will appear here.</p>
         </div>
       )}
     </div>
