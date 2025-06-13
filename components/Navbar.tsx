@@ -15,14 +15,14 @@ export default function Navbar() {
           <Image
             src="/logo1.png"
             alt="3YP Logo"
-            width={100}
-            height={86}
+             width={200.16}
+              height={71.26}
             className="w-auto"
           />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-8 text-sm font-medium text-gray-800">
+        <div className="hidden md:flex gap-8 text-lg font-medium text-[#0F1017] leading-[100%] tracking-[-0.05em]">
           <a href="#">Rider</a>
           <a href="#">Driver</a>
           <a href="#">About us</a>
@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Download Button */}
-        <button className="hidden md:block bg-[#0A5F56] text-white px-5 py-2 rounded-full text-sm font-medium transition hover:bg-[#277A5F] cursor-pointer">
+        <button className="hidden md:block bg-[#0A5F56] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F] cursor-pointer">
           <span className="inline-block align-middle mr-2">
             <Download className="w-4 h-4 -mt-1" />
           </span>
@@ -50,13 +50,13 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-md z-10 flex flex-col items-start px-4 py-4 gap-4 text-sm font-medium text-gray-800 transition-all duration-300 ease-in-out md:hidden">
+          <div className="absolute top-full left-0 w-full bg-white shadow-md z-10 flex flex-col items-start px-4 py-4 gap-4 text-lg font-medium text-[#0F1017] transition-all duration-300 ease-in-out md:hidden">
             <a href="#">Rider</a>
             <a href="#">Driver</a>
             <a href="#">About us</a>
             <a href="#">Careers</a>
             <a href="#">Help/Support</a>
-            <button className="w-full bg-[#0A5F56] text-white px-5 py-2 rounded-full text-sm font-medium transition hover:bg-[#277A5F]">
+            <button className="w-full bg-[#0A5F56] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F]">
               <span className="inline-block align-middle mr-2">
                 <Download className="w-4 h-4 -mt-1" />
               </span>

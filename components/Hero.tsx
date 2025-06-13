@@ -8,13 +8,16 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center text-center pt-8 pb-4 md:pt-16 md:pb-8 overflow-x-hidden">
+    <section className="flex flex-col items-center text-center pt-8 pb-4 md:pt-38 md:pb-8 overflow-x-hidden">
       {" "}
       {/* ✅ Added overflow-x-hidden here */}
-      <h1 className="text-3xl md:text-5xl font-bold text-[#277A5F] mb-4 leading-tight">
+      <h1 className="text-[87.49px] font-medium leading-[100%] tracking-[-4.1px] text-[#277A5F] mb-4 text-center">
         Your ride’s a tap away
       </h1>
-      <p className="text-gray-700 max-w-xl mx-auto mb-6 text-base md:text-lg">
+      <p
+        className="text-[#101010] font-medium text-[24px] leading-[100%] tracking-[-0.075em] text-center mx-auto mb-12"
+        style={{ maxWidth: "769px" }}
+      >
         Whether you’re catching a flight, going out for the night, commuting to
         the office, or running errands, the 3YP app helps you get there quickly
         and easily.
@@ -28,7 +31,7 @@ const Hero = () => {
           stiffness: 500,
           damping: 20,
         }}
-        className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4 md:px-0"
+        className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4 md:px-0 md:mb-[93px]"
       >
         {[
           { icon: faGooglePlay, label: "Download app" },
@@ -58,24 +61,32 @@ const Hero = () => {
         />
         {/* Cars */}
         <div className="relative w-full h-full overflow-hidden">
-          {/* Car 1 */}
+          {/* Car 1  animate-car*/}
           <Image
             src="/Car1.png"
             alt="Green Car"
-            width={180}
-            height={60}
-            className="absolute bottom-[50px] z-10 animate-car"
-            style={{ left: 0 }}
+            width={320}
+            height={200}
+            className="absolute z-10"
+            style={{
+              top: "-9px",
+              left: "238px",
+              transform: "rotate(-1.82deg)",
+            }}
           />
 
-          {/* Car 2 (flipped horizontally if needed) */}
+          {/* Car 2 (flipped horizontally if needed)  animate-car animate-car-2 */}
           <Image
             src="/Car2.png"
             alt="White Car"
-            width={160}
-            height={50}
-            className="absolute bottom-[100px] z-10 animate-car animate-car-2"
-            style={{ left: 0, transform: "scaleX(1)" }} // Change to scaleX(-1) if image is reversed
+            width={250}
+            height={130}
+            className="absolute z-10"
+            style={{
+              top: "20px",
+              right: "220px",
+              transform: "rotate(2.77deg) scaleX(1)",
+            }}
           />
         </div>
       </div>

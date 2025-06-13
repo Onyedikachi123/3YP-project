@@ -11,7 +11,13 @@ const AssignedVehicleCard = () => {
     <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className=" rounded-xl shadow-lg p-4 sm:p-6 bg-white">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-base font-light">Current Assigned Vehicle</h2>
+          <h2
+            className="text-[16px] font-medium leading-[100%] tracking-[-0.8px]"
+            style={{ fontFamily: "Instrument Sans" }}
+          >
+            Current Assigned Vehicle
+          </h2>
+
           <button className="px-4 py-2 text-xs  text-[#ffffff] bg-[#277A5F] rounded-md cursor-pointer">
             View Vehicle
           </button>
@@ -69,10 +75,17 @@ const AssignedVehicleCard = () => {
           {/* Details Section */}
           <div className=" py-5 max-w-md mx-auto w-full pt-12 md:mt-8">
             {/* Assigned Car Title */}
-            <h3 className="text-base sm:text-lg font-semibold mb-1">
+            <h3
+              className="text-[25.52px] font-medium leading-[100%] tracking-[-0.51px] mb-1 text-black"
+              style={{ fontFamily: "Instrument Sans" }}
+            >
               Assigned Car
             </h3>
-            <p className="text-gray-700 text-sm sm:text-base mb-4">
+
+            <p
+              className="text-black text-[18.23px] font-normal leading-[100%] tracking-[0] mb-4"
+              style={{ fontFamily: "Instrument Sans" }}
+            >
               Toyota Corolla, Silver . TBWR206HF
             </p>
 
