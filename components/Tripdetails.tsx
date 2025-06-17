@@ -159,9 +159,9 @@ export default function TripDetailsCard() {
             <Image
               src="/happy.jpg"
               alt="Driver"
-              width={80}
-              height={100}
-              className="rounded-lg object-cover border border-gray-200 p-1"
+              width={150}
+              height={200}
+              className="rounded-[4.65px] object-cover border-[1.45px] border-[#D7D7D7] p-1"
             />
             <div className="flex gap-2">
               <button className="bg-black text-white text-xs px-4 py-1 rounded font-medium">
