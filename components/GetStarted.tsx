@@ -17,11 +17,22 @@ const GetStarted: React.FC = () => {
           className="flex flex-col items-center md:items-start w-full space-y-8 mb-12 md:mb-0"
         >
           {/* Heading */}
-          <h1 className="text-3xl md:text-6xl font-medium text-center md:text-left text-[#1A1A1A] leading-snug">
-            How to get started
-            <br className="hidden md:block" />
-            in few steps
-          </h1>
+          <div className="w-full px-4 md:px-8 lg:px-16">
+            <h1
+              className="text-[32px] md:text-6xl font-medium leading-[110%] tracking-[-0.04em] text-transparent bg-clip-text"
+              style={{
+                fontFamily: "Instrument Sans",
+                backgroundImage:
+                  "linear-gradient(149.44deg, #1A1A1A 40.45%, rgba(56, 56, 56, 0.6) 123.45%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              How to get started
+              <br className="block md:hidden" />
+              <span className="md:ml-2">in few steps</span>
+            </h1>
+          </div>
 
           {/* Phone image */}
           <div className="w-full flex justify-center md:justify-start pt-8 px-8">

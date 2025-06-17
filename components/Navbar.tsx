@@ -15,9 +15,9 @@ export default function Navbar() {
           <Image
             src="/logo1.png"
             alt="3YP Logo"
-             width={200.16}
-              height={71.26}
-            className="w-auto"
+            width={100}
+            height={60}
+            className=""
           />
         </div>
 
@@ -30,6 +30,23 @@ export default function Navbar() {
           <a href="#">Help/Support</a>
         </div>
 
+        {/* Mobile Download Button + Menu Icon */}
+        <div className="flex items-center gap-4 md:hidden">
+          <button className="bg-[#0A5F56] text-white px-4 py-2 rounded-full text-[7.76px] font-medium hover:bg-[#277A5F]">
+              <span className="inline-block align-middle mr-2">
+            <Download className="w-[8.87px] h-[8.87px] -mt-1" />
+          </span>
+          Download app
+          </button>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-[#0F1017]"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
         {/* Desktop Download Button */}
         <button className="hidden md:block bg-[#0A5F56] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F] cursor-pointer">
           <span className="inline-block align-middle mr-2">
@@ -37,16 +54,6 @@ export default function Navbar() {
           </span>
           Download app
         </button>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-[#277A5F]"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
@@ -56,12 +63,6 @@ export default function Navbar() {
             <a href="#">About us</a>
             <a href="#">Careers</a>
             <a href="#">Help/Support</a>
-            <button className="w-full bg-[#0A5F56] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F]">
-              <span className="inline-block align-middle mr-2">
-                <Download className="w-4 h-4 -mt-1" />
-              </span>
-              Download app
-            </button>
           </div>
         )}
       </nav>
