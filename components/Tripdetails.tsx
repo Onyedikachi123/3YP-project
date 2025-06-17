@@ -13,9 +13,9 @@ export default function TripDetailsCard() {
           <Image
             src="/bro.png"
             alt="User"
-            width={100}
-            height={100}
-            className="rounded-lg object-cover border border-gray-200 p-1"
+            width={145.13}
+            height={145.13}
+            className="rounded-lg object-cover border-2 border-[#D7D7D7] p-1"
           />
           <div className="flex gap-2">
             <button className="bg-[#277A5F] text-white text-xs px-4 py-1 rounded font-medium">
@@ -32,66 +32,71 @@ export default function TripDetailsCard() {
         {/* User Info */}
         <div className="mt-6 space-y-2 text-sm leading-[2.5] ">
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">User ID:</span>
-            <span className="text-[#0F101799] font-light">#USR0982</span>
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017] ">
+              User ID:
+            </span>
+
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
+              #USR0982
+            </span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">Name:</span>
-            <span className="font-light text-[#0F101799]">Jake Olatunde</span>
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Name:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Jake Olatunde</span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">Phone No:</span>
-            <span className="font-light text-[#0F101799]">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Phone No:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
               +234 816 907 1955
             </span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">Email:</span>
-            <span className="font-light text-[#0F101799]">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Email:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
               jakeolatunde@gmail.com
             </span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">Gender:</span>
-            <span className="font-light text-[#0F101799]">Female</span>
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Gender:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Female</span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
               Date of Birth:
             </span>
-            <span className="font-light text-[#0F101799]">10-13-1980</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">10-13-1980</span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">Occupation:</span>
-            <span className="font-light text-[#0F101799]">Student</span>
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Occupation:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Student</span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
               Home Address:
             </span>
-            <span className="font-light text-[#0F101799]">
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
               9, Asokoro road, Jos close
             </span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
               Work Address:
             </span>
-            <span className="font-light text-[#0F101799]">
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
               707 Chestnut St, Hill Valley, CA
             </span>
           </div>
           <div className="flex">
-            <span className="w-36 text-[#110000] font-light">City/County:</span>
-            <span className="font-light text-[#0F101799]">Lagos / Nigeria</span>
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">City/County:</span>
+            <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Lagos / Nigeria</span>
           </div>
           <div className="flex items-center">
-            <span className="w-36 text-[#110000] font-light">
+            <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
               Subscription:
             </span>
             <button className="flex items-center gap-2 px-5 py-1 bg-white text-[#101828] rounded-md  transition-colors cursor-pointer shadow">
               <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-              <span className="text-xs font-light text-[#0F101799]">
+              <span className="text-[12.93px] font-medium text-[#101828]">
                 Active
               </span>
             </button>
@@ -169,47 +174,47 @@ export default function TripDetailsCard() {
           </div>
           <div className="mt-6 space-y-2 text-sm leading-[2.5]">
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Driver ID:</span>
-              <span className="font-light text-[#0F101799]">#USR0982</span>
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Driver ID:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">#USR0982</span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Name:</span>
-              <span className="font-light text-[#0F101799]">Jake Olatunde</span>
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Name:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Jake Olatunde</span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Phone No:</span>
-              <span className="font-light text-[#0F101799]">
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Phone No:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
                 +234 816 907 1955
               </span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Email:</span>
-              <span className="font-light text-[#0F101799]">
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Email:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
                 jakeolatunde@gmail.com
               </span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Gender:</span>
-              <span className="font-light text-[#0F101799]">Female</span>
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Gender:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Female</span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">Ratings:</span>
-              <span className="font-light text-[#0F101799] flex items-center">
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Ratings:</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans'] flex items-center">
                 Ratings: 4.0
                 <span className="ml-1 text-yellow-500">★★★★☆</span>
               </span>
             </div>
             <div className="flex">
-              <span className="w-32 text-[#110000] font-light">
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
                 Assigned Station
               </span>
-              <span className="font-light text-[#0F101799]">Lekki Station</span>
+              <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">Lekki Station</span>
             </div>
             <div className="flex items-center">
-              <span className="w-32 text-[#110000] font-light">Status</span>
+              <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">Status</span>
               <button className="flex items-center gap-2 px-5 py-1 bg-white text-[#101828] rounded-md  transition-colors cursor-pointer shadow">
                 <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-                <span className="text-xs font-light text-[#0F101799]">
+                <span className="text-[12.93px] font-medium text-[#101828]">
                   Clock In
                 </span>
               </button>

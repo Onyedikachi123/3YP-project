@@ -137,14 +137,14 @@ export default function Sidebar() {
               </div>
 
               {hasDropdown && isOpen && (
-                <div className="ml-3 mt-1 border border-white rounded overflow-hidden bg-[#51957f]">
+                <div className="ml-3 mt-1 border border-white rounded overflow-hidden bg-[#48D38A80]">
                   {item.sub.map((subItem, j) => (
                     <a
                       key={j}
                       href={subItem.link}
                       className="group block text-sm px-3 py-2 text-white hover:bg-white/20"
                     >
-                      <span className="pl-2 group-hover:border-l-2 group-hover:border-white block">
+                      <span className="pl-2 block group-hover:border-l-2 group-hover:border-white font-['Instrument_Sans'] font-normal text-[16px] leading-[100%] tracking-[-0.01em]">
                         {subItem.label}
                       </span>
                     </a>

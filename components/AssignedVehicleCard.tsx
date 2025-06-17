@@ -92,14 +92,14 @@ const AssignedVehicleCard = () => {
             {/* Details Grid */}
             <div className="flex flex-col sm:flex-row sm:gap-8 gap-4 pt-[60px]">
               {/* Left: Energy + Ride Type */}
-              <div className="flex-1 border-l-3 border-l-[#D9D9D9] pl-4">
+              <div className="flex-1 border-l-5 border-l-[#D9D9D9] pl-4">
                 <div>
-                  <p className="text-xs text-gray-500">Energy Used</p>
-                  <p className="font-medium text-sm sm:text-base">1289KMH</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Energy Used</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0]">1289KMH</p>
                 </div>
-                <div className="mt-4">
-                  <p className="text-xs text-gray-500">Ride Type</p>
-                  <p className="font-medium text-sm sm:text-base">
+                <div className="mt-16">
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Ride Type</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0] sm:text-base">
                     Standard ride
                   </p>
                 </div>
@@ -109,26 +109,24 @@ const AssignedVehicleCard = () => {
                 {/* Custom left border */}
                 <span
                   aria-hidden
-                  className="absolute left-0 top-0 h-full w-[3px] rounded"
+                  className="absolute left-0 top-0 h-full w-[5.74px]"
                   style={{
                     background:
                       "linear-gradient(to bottom, #277A5F 0%, #277A5F 40%, #D9D9D9 40%, #D9D9D9 100%)",
                   }}
                 />
                 <div>
-                  <p className="text-xs text-gray-500">Pick up Station</p>
-                  <p className="font-medium text-sm sm:text-base">
-                    Abuja Station 1
-                  </p>
-                  <p className="text-xs text-gray-500 leading-tight">
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Pick up Station</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0] text-[#000000]">
+                    Abuja Station 1<br />
                     No 27, Monrovia street,
                     <br />
                     wuse 2, Abuja
                   </p>
                 </div>
-                <div className="mt-4">
-                  <p className="text-xs text-gray-500">Drop off Station</p>
-                  <p className="font-medium text-sm sm:text-base">
+                <div className="mt-8">
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Drop off Station</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0]">
                     Abuja Station 2
                   </p>
                 </div>
