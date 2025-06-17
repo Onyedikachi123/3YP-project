@@ -9,7 +9,7 @@ const AssignedVehicleCard = () => {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
-      <div className=" rounded-xl shadow-lg p-4 sm:p-6 bg-white">
+      <div className="  shadow-[0px_6px_10px_0px_#BBBBBB40] p-4 sm:p-6 bg-white">
         <div className="flex items-center justify-between mb-4">
           <h2
             className="text-[16px] font-medium leading-[100%] tracking-[-0.8px]"
