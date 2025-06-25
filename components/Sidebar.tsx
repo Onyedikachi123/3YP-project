@@ -116,9 +116,9 @@ export default function Sidebar() {
                   isOpen ? "bg-[#5BFFCA66]" : ""
                 }`}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ">
                   {item.icon}
-                  <span>{item.label}</span>
+                  <span className="font-['Instrument_Sans']">{item.label}</span>
                 </div>
 
                 {!isCustomerCareOrServer && (

@@ -157,10 +157,10 @@ export default function TripDetailsCard() {
         <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col flex-1">
           <div className="flex items-start justify-between">
             <Image
-              src="/happy.jpg"
+              src="/alex.jpg"
               alt="Driver"
-              width={150}
-              height={200}
+              width={93}
+              height={93}
               className="rounded-[4.65px] object-cover border-[1.45px] border-[#D7D7D7] p-1"
             />
             <div className="flex gap-2">

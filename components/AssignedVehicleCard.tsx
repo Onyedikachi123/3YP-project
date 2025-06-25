@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const carImages = ["/car.png", "/view3.png"];
+const carImages = ["/car.png", "/view3.png", "/frank.jpg"];
 
 const AssignedVehicleCard = () => {
   const [selectedImage, setSelectedImage] = useState(carImages[0]);
@@ -18,7 +18,7 @@ const AssignedVehicleCard = () => {
             Current Assigned Vehicle
           </h2>
 
-          <button className="px-4 py-2 text-xs  text-[#ffffff] bg-[#277A5F] rounded-md cursor-pointer">
+          <button className="px-4 py-2 text-xs  text-[#ffffff] bg-[#277A5F] rounded-md cursor-pointer font-['Instrument_Sans']">
             View Vehicle
           </button>
         </div>
