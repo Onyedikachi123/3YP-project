@@ -13,9 +13,12 @@ const Hero = () => {
                  overflow-x-hidden"
     >
       {/* <section className="flex flex-col items-center text-center pt-[100px] pb-4 md:pt-[250px] md:pb-8 overflow-x-hidden"> */}
-      <h1 className="text-[36px] sm:text-[87.49px] font-medium leading-[100%] tracking-[-1.69px] sm:tracking-[-4.1px] text-[#277A5F] mb-4 text-center">
+      <h1 className="font-['Instrument_Sans'] text-[36px] sm:text-[87.49px] font-medium leading-[100%] tracking-[-1.69px] sm:tracking-[-4.1px] text-[#277A5F] mb-4 text-center">
         Your ride’s a tap away
       </h1>
+
+
+
       <p
         className="font-['Instrument_Sans'] font-medium text-[14px] leading-[100%] tracking-[-0.05em] text-center text-[#101010] mx-auto mb-12
     md:text-[24px] md:leading-[100%] md:tracking-[-0.05em]
@@ -45,7 +48,7 @@ const Hero = () => {
             key={index}
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="bg-[#277A5F] text-white px-6 py-3 rounded-full text-base font-medium flex items-center gap-2 shadow cursor-pointer"
+            className="bg-[#277A5F] text-white px-6 py-3 rounded-full text-base font-medium flex items-center gap-2 shadow cursor-pointer font-['Instrument_Sans']"
           >
             <FontAwesomeIcon icon={icon} />
             {label}

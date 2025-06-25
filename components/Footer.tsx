@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F1017] text-white mt-10 pt-10 pb-4 px-4 md:px-0 h-[400px]">
+    <footer className="bg-[#0F1017] text-white pt-10 pb-4 px-4 md:px-0 h-[400px]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:gap-x-18 gap-y-12 justify-between border-t border-[#BEBFC5] pt-12 pb-12">
         {/* Column 1: Logo + Description */}
         <div className="flex-1 ">
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         {/* Column 3: Company */}
-        <div className="flex-1  flex flex-col gap-8">
+        <div className="flex-1  flex flex-col gap-8 font-['Instrument_Sans']">
           <div
             className="font-semibold mb-1 text-white"
             style={{
@@ -155,13 +155,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between border-t border-[#BEBFC5] pt-5 pb-5">
         {/* Left side: Copyright */}
         <div className="w-full md:w-auto mb-2 md:mb-0">
-          <p className="text-sm text-white text-start font-normal">
+          <p className="text-sm text-white text-start font-normal font-['Instrument_Sans']">
             &copy; All rights reserved, 3YP Technologies 2025
           </p>
         </div>
 
         {/* Right side: Links */}
-        <div className="flex gap-4 text-sm text-white font-normal">
+        <div className="flex gap-4 text-sm text-white font-normal font-['Instrument_Sans']">
           <a href="#">Privacy</a>
           <a href="#">Security</a>
           <a href="#">Terms and Condition</a>

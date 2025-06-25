@@ -26,7 +26,7 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div
-          className="hidden md:flex text-lg font-medium text-[#0F1017] leading-[100%] tracking-[-0.05em]"
+          className="hidden md:flex text-lg font-medium text-[#0F1017] leading-[100%] tracking-[-0.05em] font-['Instrument_Sans']"
           style={{ gap: "50px" }} // ✅ SET GAP BETWEEN DESKTOP LINKS
         >
           <a href="#">Home</a>
@@ -39,7 +39,7 @@ export default function Navbar() {
 
         {/* Mobile Download Button + Menu Icon */}
         <div className="flex items-center gap-4 md:hidden">
-          <button className="bg-[#0A5F56] text-white px-4 py-2 rounded-full text-[7.76px] font-medium hover:bg-[#277A5F]">
+          <button className="bg-[#0A5F56] text-white px-4 py-2 rounded-full text-[7.76px] font-medium hover:bg-[#277A5F] font-['Instrument_Sans']">
             <span className="inline-block align-middle mr-2">
               <Download className="w-[8.87px] h-[8.87px] -mt-1" />
             </span>
@@ -55,7 +55,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Download Button */}
-        <button className="hidden md:block bg-[#277A5F] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F] cursor-pointer">
+        <button className="hidden md:block bg-[#277A5F] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F] cursor-pointer font-['Instrument_Sans']">
           <span className="inline-block align-middle mr-2">
             <Download className="w-4 h-4 -mt-1" />
           </span>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-md z-10 flex flex-col items-start px-4 py-4 gap-4 text-lg font-medium text-[#0F1017] transition-all duration-300 ease-in-out md:hidden">
+          <div className=" font-['Instrument_Sans'] absolute top-full left-0 w-full bg-white shadow-md z-10 flex flex-col items-start px-4 py-4 gap-4 text-lg font-medium text-[#0F1017] transition-all duration-300 ease-in-out md:hidden">
             <a href="#">Home</a>
             <a href="#">Rider</a>
             <a href="#">Driver</a>

@@ -20,7 +20,7 @@ const GetStarted: React.FC = () => {
           {/* Heading */}
           <div className="w-full px-4 md:px-8 lg:px-16">
             <h1
-              className="text-[32px] md:text-6xl font-medium leading-[110%] tracking-[-0.04em] text-transparent bg-clip-text"
+              className="text-[32px] font-['Instrument_Sans'] md:text-6xl font-medium leading-[110%] tracking-[-0.04em] text-transparent bg-clip-text"
               style={{
                 fontFamily: "Instrument Sans",
                 backgroundImage:
@@ -66,12 +66,12 @@ const GetStarted: React.FC = () => {
               <div className="h-18 border-l-2 border-dotted border-[#267b5f]"></div>
             </div>
             <div>
-              <h1 className="font-medium text-[#267b5f] text-xl md:text-3xl -mt-4">
+              <h1 className="font-medium text-[#267b5f] text-xl md:text-3xl -mt-4 font-['Instrument_Sans']">
                 {" "}
                 {/* ✅ responsive text size */}
                 Download the 3YP mobile app
               </h1>
-              <p className="text-gray-600 text-base md:text-lg mb-2 font-normal">
+              <p className="text-gray-600 text-base md:text-lg mb-2 font-normal font-['Instrument_Sans']">
                 {" "}
                 {/* ✅ responsive text size */}
                 <span className="block">
@@ -101,18 +101,18 @@ const GetStarted: React.FC = () => {
               <div className="h-18 border-l-2 border-dotted border-[#267b5f]"></div>
             </div>
             <div>
-              <h3 className="font-medium text-[#101010] text-xl md:text-3xl -mt-2">
+              <h3 className="font-medium text-[#101010] text-xl md:text-3xl -mt-2 font-['Instrument_Sans']">
                 {" "}
                 {/* ✅ responsive text size */}
                 Create an account
               </h3>
-              <p className="text-gray-600 text-base md:text-lg mb-2 font-normal">
+              <p className="text-gray-600 text-base md:text-lg mb-2 font-normal ">
                 {" "}
                 {/* ✅ responsive text size */}
-                <span className="block">
+                <span className="block font-['Instrument_Sans']">
                   Sign up for an account with your name,
                 </span>
-                <span className="block">email, and phone number.</span>
+                <span className="block font-['Instrument_Sans']">email, and phone number.</span>
               </p>
             </div>
           </div>
@@ -122,12 +122,12 @@ const GetStarted: React.FC = () => {
               3
             </div>
             <div>
-              <h3 className="font-medium text-[#101010] text-xl md:text-3xl -mt-4">
+              <h3 className="font-medium text-[#101010] text-xl md:text-3xl -mt-4 font-['Instrument_Sans']">
                 {" "}
                 {/* ✅ responsive text size */}
                 Relax and Your ride’s a tap away
               </h3>
-              <p className="text-gray-600 text-base md:text-lg font-normal">
+              <p className="text-gray-600 text-base md:text-lg font-normal font-['Instrument_Sans']">
                 {" "}
                 {/* ✅ responsive text size */}
                 Sit back and relax. Your ride’s a tap away. Enjoy the platform
