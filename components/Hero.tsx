@@ -3,21 +3,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ParallaxSection from "./ParallaxSection";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center text-center pt-[100px] pb-4 md:pt-[250px] md:pb-8 overflow-x-hidden">
-      {" "}
-      {/* ✅ Added overflow-x-hidden here */}
+    <ParallaxSection speed={0.15}
+      className="flex flex-col items-center text-center
+                 pt-[100px] pb-4 md:pt-[250px] md:pb-8
+                 overflow-x-hidden"
+    >
+      {/* <section className="flex flex-col items-center text-center pt-[100px] pb-4 md:pt-[250px] md:pb-8 overflow-x-hidden"> */}
       <h1 className="text-[36px] sm:text-[87.49px] font-medium leading-[100%] tracking-[-1.69px] sm:tracking-[-4.1px] text-[#277A5F] mb-4 text-center">
         Your ride’s a tap away
       </h1>
       <p
-        className="
-    font-['Instrument_Sans'] font-medium text-[14px] leading-[100%] tracking-[-0.05em] text-center text-[#101010] mx-auto mb-12
+        className="font-['Instrument_Sans'] font-medium text-[14px] leading-[100%] tracking-[-0.05em] text-center text-[#101010] mx-auto mb-12
     md:text-[24px] md:leading-[100%] md:tracking-[-0.05em]
-    lg:text-[24px] lg:leading-[100%] lg:tracking-[-0.05em]
-  "
+    lg:text-[24px] lg:leading-[100%] lg:tracking-[-0.05em]"
         style={{ maxWidth: "769px" }}
       >
         Whether you’re catching a flight, going out for the night, commuting to
@@ -92,7 +94,8 @@ const Hero = () => {
           />
         </div>
       </div>
-    </section>
+      {/* </section> */}
+    </ParallaxSection>
   );
 };
 

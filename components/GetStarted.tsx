@@ -3,10 +3,11 @@ import Image from "next/image";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import ParallaxSection from "./ParallaxSection";
 
 const GetStarted: React.FC = () => {
   return (
-    <section className="bg-white w-full py-10 px-4">
+    <ParallaxSection speed={0.25} className="bg-white w-full py-10 px-4">
       <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:px-12 items-start">
         {/* Left Column: Heading + Image */}
         <motion.div
@@ -136,7 +137,7 @@ const GetStarted: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </ParallaxSection>
   );
 };
 

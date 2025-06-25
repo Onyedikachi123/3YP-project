@@ -48,3 +48,7 @@ body {
   animation: drive-left-to-right 12s linear infinite;
   animation-delay: 3s;
 }
+
+html {
+  scroll-behavior: smooth;
+}
