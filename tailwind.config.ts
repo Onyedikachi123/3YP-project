@@ -5,8 +5,8 @@ const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["var(--font-instrument-sans)", "sans-serif"],
+       fontFamily: {
+        instrument: ['"Instrument Sans"', 'sans-serif'],
       },
       maxWidth: {
         custom: "769px",

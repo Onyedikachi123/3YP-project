@@ -16,10 +16,10 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image
-            src="/logo1.png"
+            src="/mainlogo.png"
             alt="3YP Logo"
-            width={130}
-            height={70}
+            width={120.16}
+            height={51.26}
             className=""
           />
         </div>
@@ -55,7 +55,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Download Button */}
-        <button className="hidden md:block bg-[#277A5F] text-white px-5 py-2 rounded-full text-lg font-medium transition hover:bg-[#277A5F] cursor-pointer font-['Instrument_Sans']">
+        <button className="hidden md:block bg-[#277A5F] text-white px-5 py-5 rounded-full text-sm font-medium transition hover:bg-[#277A5F] cursor-pointer font-['Instrument_Sans']">
           <span className="inline-block align-middle mr-2">
             <Download className="w-4 h-4 -mt-1" />
           </span>

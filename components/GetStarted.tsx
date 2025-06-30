@@ -3,11 +3,23 @@ import Image from "next/image";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import ParallaxSection from "./ParallaxSection";
+
+const fadeInUp = {
+  initial: { y: 100, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: { duration: 1.2, ease: "easeInOut" },
+};
 
 const GetStarted: React.FC = () => {
   return (
-    <ParallaxSection speed={0.25} className="bg-white w-full py-10 px-4">
+    <motion.section
+      variants={fadeInUp}
+      initial="initial"
+      whileInView="whileInView"
+      transition={fadeInUp.transition}
+      viewport={{ once: false, amount: 0.4 }}
+      className="relative z-10 bg-white w-full py-10 px-4"
+    >
       <div className="flex flex-col md:grid md:grid-cols-2 md:gap-12 md:px-12 items-start">
         {/* Left Column: Heading + Image */}
         <motion.div
@@ -112,7 +124,9 @@ const GetStarted: React.FC = () => {
                 <span className="block font-['Instrument_Sans']">
                   Sign up for an account with your name,
                 </span>
-                <span className="block font-['Instrument_Sans']">email, and phone number.</span>
+                <span className="block font-['Instrument_Sans']">
+                  email, and phone number.
+                </span>
               </p>
             </div>
           </div>
@@ -137,7 +151,7 @@ const GetStarted: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </ParallaxSection>
+    </motion.section>
   );
 };
 
