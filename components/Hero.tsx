@@ -1,33 +1,41 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const Hero = () => {
+  // ✅ FIXED: Moved inside the component function
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
     <motion.section
-      /* 🟢 NEW animation: stays fixed in place, no parallax */
+      ref={ref}
+      style={{ opacity }} // ✅ Add opacity animation here
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
-      className="relative z-10 flex flex-col items-center text-center
+      className="w-full  flex flex-col items-center text-center bg-white
                  pt-[100px] pb-4 md:pt-[290px] md:pb-8 overflow-x-hidden"
     >
-      {/* <section className="flex flex-col items-center text-center pt-[100px] pb-4 md:pt-[250px] md:pb-8 overflow-x-hidden"> */}
       <h1 className="font-['Instrument_Sans'] text-[36px] sm:text-[87.49px] font-medium leading-[100%] tracking-[-1.69px] sm:tracking-[-4.1px] text-[#277A5F] mb-4 text-center">
         Your ride’s a tap away
       </h1>
       <p
         className="font-['Instrument_Sans'] font-medium text-[14px] leading-[100%] tracking-[-0.05em] text-center text-[#101010] mx-auto mb-12
-    md:text-[24px] md:leading-[100%] md:tracking-[-0.05em]
-    lg:text-[24px] lg:leading-[100%] lg:tracking-[-0.05em]"
+          md:text-[24px] md:leading-[100%] md:tracking-[-0.05em]
+          lg:text-[24px] lg:leading-[100%] lg:tracking-[-0.05em]"
         style={{ maxWidth: "769px" }}
       >
         Whether you’re catching a flight, going out for the night, commuting to
         the office, or running errands, the 3YP app helps you get there quickly
         and easily.
       </p>
+
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -54,20 +62,16 @@ const Hero = () => {
           </motion.button>
         ))}
       </motion.div>
+
       {/* --- Static Road and Cars --- */}
       <div className="relative w-full h-[300px] mt-8 overflow-hidden">
-        {" "}
-        {/* ✅ Added overflow-hidden here */}
-        {/* Road */}
         <Image
           src="/road.png"
           alt="Road"
           fill
           className="absolute top-0 left-0 object-cover z-0"
         />
-        {/* Cars */}
         <div className="relative w-full h-full overflow-hidden">
-          {/* Car 1  animate-car*/}
           <Image
             src="/Car1.png"
             alt="Green Car"
@@ -80,8 +84,6 @@ const Hero = () => {
               transform: "rotate(-1.82deg)",
             }}
           />
-
-          {/* Car 2 (flipped horizontally if needed)  animate-car animate-car-2 */}
           <Image
             src="/Car2.png"
             alt="White Car"
@@ -96,7 +98,6 @@ const Hero = () => {
           />
         </div>
       </div>
-      {/* </section> */}
     </motion.section>
   );
 };
