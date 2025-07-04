@@ -76,7 +76,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="h-screen flex flex-col w-[240px] bg-[#277A5F] text-white">
+    <aside className="h-screen flex flex-col w-[315px] bg-[#277A5F] text-white">
       {/* Header with logo and vertical border */}
       <div className="bg-white text-black shadow px-4 py-[13px] flex justify-between items-center">
         <div className="relative flex items-center pr-6">
@@ -84,11 +84,11 @@ export default function Sidebar() {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={30}
-              height={30}
+              width={63}
+              height={63}
               className="rounded-md"
             />
-            <span className="text-sm font-medium ml-2 text-[#101828]">
+            <span className="text-xl font-medium ml-2 text-[#101828]">
               3YP ADMIN
             </span>
           </div>
@@ -98,7 +98,7 @@ export default function Sidebar() {
       </div>
 
       {/* Sidebar Menu Scrollable */}
-      <div className="overflow-y-auto flex-grow p-4 space-y-4">
+      <div className="overflow-y-auto flex-grow px-4 space-y-4 pt-12">
         {menu.map((item, i) => {
           const isCustomerCareOrServer =
             item.label === "Customer Care" ||
@@ -109,16 +109,16 @@ export default function Sidebar() {
           const isOpen = openIndex === i;
 
           return (
-            <div key={i} className="space-y-1">
+            <div key={i} className="space-y-3">
               <div
                 onClick={() => hasDropdown && toggleDropdown(i)}
-                className={`flex items-center justify-between text-xs font-semibold py-2 px-3 rounded cursor-pointer leading-[1.75rem] ${
+                className={`flex items-center justify-between text-xs font-semibold py-4 px-3 rounded cursor-pointer leading-[1.75rem] ${
                   isOpen ? "bg-[#5BFFCA66]" : ""
                 }`}
               >
                 <div className="flex items-center gap-2 ">
                   {item.icon}
-                  <span className="font-['Instrument_Sans']">{item.label}</span>
+                  <span className="font-['Instrument_Sans'] font-normal text-base">{item.label}</span>
                 </div>
 
                 {!isCustomerCareOrServer && (
@@ -137,7 +137,7 @@ export default function Sidebar() {
               </div>
 
               {hasDropdown && isOpen && (
-                <div className="ml-3 mt-1 border border-white rounded overflow-hidden bg-[#48D38A80]">
+                <div className="ml-3 mt-1 border border-white rounded-lg overflow-hidden bg-[#51957f] py-5">
                   {item.sub.map((subItem, j) => (
                     <a
                       key={j}

@@ -2,14 +2,14 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const carImages = ["/car.png", "/view3.png", "/frank.jpg"];
+const carImages = ["/car.png", "/view3.png", "/inside.png"];
 
 const AssignedVehicleCard = () => {
   const [selectedImage, setSelectedImage] = useState(carImages[0]);
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
-      <div className="  shadow-[0px_6px_10px_0px_#BBBBBB40] p-4 sm:p-6 bg-white">
+      <div className="shadow-[0px_6px_10px_0px_#BBBBBB40] p-4 sm:p-6 bg-white">
         <div className="flex items-center justify-between mb-4">
           <h2
             className="text-[16px] font-medium leading-[100%] tracking-[-0.8px]"
@@ -73,7 +73,7 @@ const AssignedVehicleCard = () => {
           </div>
 
           {/* Details Section */}
-          <div className=" py-5 max-w-md mx-auto w-full pt-12 md:mt-8">
+          <div className=" py-5 max-w-md mx-auto w-full pt-12 md:mt-3">
             {/* Assigned Car Title */}
             <h3
               className="text-[25.52px] font-medium leading-[100%] tracking-[-0.51px] mb-1 text-black"
@@ -138,7 +138,7 @@ const AssignedVehicleCard = () => {
           {["Healthy", "100% Battery", "500KM"].map((label, index) => (
             <button
               key={index}
-              className="px-4 py-2 text-sm cursor-pointer rounded border border-[#BEBFC5] bg-transparent text-[#101010]"
+              className="px-4 py-2 text-xs cursor-pointer rounded border border-[#BEBFC5] bg-transparent text-[#101010]"
             >
               {label}
             </button>

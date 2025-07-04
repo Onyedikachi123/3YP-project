@@ -7,12 +7,12 @@ export default function Topbar() {
   const [open, setOpen] = useState(false);
   const roles = ['Super Admin', 'Admin'];
   return (
-    <header className="bg-white shadow px-4 py-3 flex justify-between items-center sticky top-0 z-10">
+    <header className="bg-white shadow px-4 py-3 flex justify-between items-center sticky top-0 z-10 h-[90px]">
       {/* 🔧 Input with search icon on the right */}
       <div className="relative flex-grow max-w-5xl">
         <input
           placeholder="Search anything"
-          className=" rounded-md pr-10 pl-4 py-2 w-full focus:outline-none text-xs bg-[#F6F6F6] placeholder:text-[#B5B5B5] font-light "
+          className="h-12 rounded-lg pr-10 pl-4 py-2 w-full focus:outline-none text-lg bg-[#F6F6F6] placeholder:text-[#B5B5B5] font-normal "
         />
         <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-[#1E1E1E] h-4 w-4" />
       </div>
@@ -30,10 +30,10 @@ export default function Topbar() {
             onClick={() => setOpen(!open)}
             className="flex items-center gap-2 focus:outline-none"
           >
-            <span className="bg-[#277A5F] p-1 text-white rounded-md">
+            <span className="bg-[#277A5F] p-2 text-white rounded-md">
               <User className="w-4 h-4 cursor-pointer" />
             </span>
-            <span className="text-[#101010] font-light text-sm">{role}</span>
+            <span className="text-[#101010] font-normal text-sm">{role}</span>
             {open ? (
               <ChevronUp className="w-4 h-4 text-gray-500 cursor-pointer" />
             ) : (
