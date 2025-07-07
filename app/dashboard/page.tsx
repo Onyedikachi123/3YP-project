@@ -1,10 +1,20 @@
+"use client";
 import AssignedVehicleCard from "@/components/AssignedVehicleCard";
-import React from "react";
+import React, { useEffect } from "react";
 import { Ellipsis } from "lucide-react";
 import TripDetailsCard from "@/components/Tripdetails";
 import Map from "@/components/Map";
+import { useTripStore } from "@/store/tripStore";
 
 const Dashboard = () => {
+  const { current: trip, fetchTrip } = useTripStore();
+
+  useEffect(() => {
+    fetchTrip("trip001");
+  }, [fetchTrip]);
+
+  if (!trip) return null;
+
   return (
     <main className="min-h-screen bg-[#F6F6F6] pt-6 relative">
       <div className="px-4 sm:px-6 lg:px-8 mb-6">
@@ -13,7 +23,7 @@ const Dashboard = () => {
           style={{ fontFamily: "Instrument Sans" }}
         >
           <span className="text-[#063510] font-medium">Trips List/</span>
-          <span className="text-[#10101080] font-normal">Trip 001</span>
+          <span className="text-[#10101080] font-normal">{trip.id}</span>
         </h1>
       </div>
 

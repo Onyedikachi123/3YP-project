@@ -1,11 +1,18 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useVehicleStore } from "@/store/vehicleStore";
 
 const carImages = ["/car.png", "/view3.png", "/inside.png"];
 
 const AssignedVehicleCard = () => {
   const [selectedImage, setSelectedImage] = useState(carImages[0]);
+  const { vehicles, fetchVehicles } = useVehicleStore();
+  useEffect(() => {
+    fetchVehicles();
+  }, [fetchVehicles]);
+  const v = vehicles[0];
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -86,7 +93,8 @@ const AssignedVehicleCard = () => {
               className="text-black text-[18.23px] font-normal leading-[100%] tracking-[0] mb-4"
               style={{ fontFamily: "Instrument Sans" }}
             >
-              Toyota Corolla, Silver . TBWR206HF
+              {/* Toyota Corolla, Silver . TBWR206HF */}
+             {v?.make} {v?.model}, {v?.color} · {v?.plate}
             </p>
 
             {/* Details Grid */}
@@ -94,11 +102,17 @@ const AssignedVehicleCard = () => {
               {/* Left: Energy + Ride Type */}
               <div className="flex-1 border-l-5 border-l-[#D9D9D9] pl-4">
                 <div>
-                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Energy Used</p>
-                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0]">1289KMH</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">
+                    Energy Used
+                  </p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0]">
+                    1289KMH
+                  </p>
                 </div>
                 <div className="mt-16">
-                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Ride Type</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">
+                    Ride Type
+                  </p>
                   <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0] sm:text-base">
                     Standard ride
                   </p>
@@ -116,7 +130,9 @@ const AssignedVehicleCard = () => {
                   }}
                 />
                 <div>
-                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Pick up Station</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">
+                    Pick up Station
+                  </p>
                   <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0] text-[#000000]">
                     Abuja Station 1<br />
                     No 27, Monrovia street,
@@ -125,7 +141,9 @@ const AssignedVehicleCard = () => {
                   </p>
                 </div>
                 <div className="mt-8">
-                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">Drop off Station</p>
+                  <p className="font-['Instrument_Sans'] font-normal text-[11.77px] leading-[100%] tracking-[0] text-black pb-2">
+                    Drop off Station
+                  </p>
                   <p className="font-['Instrument_Sans'] font-normal text-[16.47px] leading-[100%] tracking-[0]">
                     Abuja Station 2
                   </p>
