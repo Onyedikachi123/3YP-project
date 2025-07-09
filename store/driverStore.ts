@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { Driver } from "@/lib/mocks";
 import { apiFetch } from "@/lib/apiClient";
+import { toast } from "react-toastify"; // ✅ added
 
 interface DriverState {
   drivers: Driver[];
@@ -21,7 +22,8 @@ export const useDriverStore = create<DriverState>()(
             cache: "no-store",
           });
           set({ drivers: data, loading: false });
-        } catch {
+        } catch (err) {
+          toast.error("Failed to fetch drivers."); // ✅ toast on error
           set({ loading: false });
         }
       },

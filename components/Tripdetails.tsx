@@ -154,7 +154,7 @@ export default function TripDetailsCard() {
 
             {/* 🔧 Added wallet button */}
             <button className="flex items-center gap-1 border border-[#EEEEEE] text-[#333] text-sm font-medium px-3 py-1 rounded-md">
-              <img
+              <Image
                 src="/wallet.png"
                 alt="Wallet"
                 className="h-[19px] w-[19px]"

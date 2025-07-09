@@ -4,6 +4,7 @@ import "./globals.css";
 import LayoutWrapper from "../components/LayoutWrapper";
 import 'leaflet/dist/leaflet.css';
 import '@/lib/fontawesome';
+import { ToastProvider } from "@/components/ToastProvider";
 
 // Load only Instrument Sans
 const instrumentSans = Instrument_Sans({
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${instrumentSans.variable} font-sans antialiased`}
       >
+        <ToastProvider />
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

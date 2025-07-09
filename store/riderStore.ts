@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { Rider } from "@/lib/mocks";
 import { apiFetch } from "@/lib/apiClient";
+import { toast } from "react-toastify"; // ✅ added
 
 interface RiderState {
   riders: Rider[];
@@ -21,7 +22,8 @@ export const useRiderStore = create<RiderState>()(
             cache: "no-store",
           });
           set({ riders: data, loading: false });
-        } catch {
+        } catch (err) {
+          toast.error("Failed to fetch riders."); // ✅ toast on error
           set({ loading: false });
         }
       },
