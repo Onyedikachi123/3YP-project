@@ -22,7 +22,7 @@ export default function TripDetailsCard() {
   const rider = riders.find((r) => r.id === trip.riderId);
 
   return (
-    <div className="h-[720px] bg-[#F6F6F6] flex flex-col md:flex-row gap-6 p-4 md:p-8 items-stretch">
+    <div className="h-[720px] bg-[#F6F6F6] flex flex-col md:flex-row gap-6 p-4 md:p-8 items-stretch -mt-5">
       {/* Left: User Details */}
       <div className="bg-white rounded-lg shadow-sm flex-1 p-6 flex flex-col">
         {/* Profile + Buttons */}
@@ -103,7 +103,7 @@ export default function TripDetailsCard() {
                 Occupation:
               </span>
               <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
-               {rider.occupation ?? "—"}
+                {rider.occupation ?? "—"}
               </span>
             </div>
             <div className="flex">
@@ -111,7 +111,7 @@ export default function TripDetailsCard() {
                 Home Address:
               </span>
               <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
-               {rider.homeAddress ?? "—"}
+                {rider.homeAddress ?? "—"}
               </span>
             </div>
             <div className="flex">
@@ -127,7 +127,7 @@ export default function TripDetailsCard() {
                 City/County:
               </span>
               <span className="text-[#0F101799] font-normal text-[19.16px] leading-[100%] tracking-[-0.089em] font-['Instrument_Sans']">
-               {rider.country ?? "—"}
+                {rider.country ?? "—"}
               </span>
             </div>
             <div className="flex items-center">
@@ -157,6 +157,8 @@ export default function TripDetailsCard() {
               <Image
                 src="/wallet.png"
                 alt="Wallet"
+                width={19}
+                height={19}
                 className="h-[19px] w-[19px]"
               />
               Wallet
@@ -224,7 +226,7 @@ export default function TripDetailsCard() {
                 </button>
               </div>
             </div>
-            <div className="mt-6 space-y-2 text-sm leading-[2.5]">
+            <div className="mt-6 space-y-1 text-sm leading-[2.5]">
               <div className="flex">
                 <span className="w-36 mb-3 font-['Instrument_Sans'] font-normal text-[18.4px] leading-[100%] tracking-[-0.089em] text-[#0F1017]">
                   Driver ID:

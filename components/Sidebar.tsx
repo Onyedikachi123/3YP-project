@@ -98,27 +98,28 @@ export default function Sidebar() {
       </div>
 
       {/* Sidebar Menu Scrollable */}
-      <div className="overflow-y-auto flex-grow px-4 space-y-4 pt-12">
+      <div className="overflow-y-auto flex-grow px-4 space-y-4">
         {menu.map((item, i) => {
           const isCustomerCareOrServer =
             item.label === "Customer Care" ||
             item.label === "Server Monitoring";
 
           const hasDropdown = item.sub && !isCustomerCareOrServer;
-
           const isOpen = openIndex === i;
 
           return (
-            <div key={i} className="space-y-3">
+            <div key={i} className={`space-y-3 ${i === 0 ? "pt-12" : ""}`}>
               <div
                 onClick={() => hasDropdown && toggleDropdown(i)}
                 className={`flex items-center justify-between text-xs font-semibold py-4 px-3 rounded cursor-pointer leading-[1.75rem] ${
                   isOpen ? "bg-[#5BFFCA66]" : ""
                 }`}
               >
-                <div className="flex items-center gap-2 ">
+                <div className="flex items-center gap-2">
                   {item.icon}
-                  <span className="font-['Instrument_Sans'] font-normal text-base">{item.label}</span>
+                  <span className="font-['Instrument_Sans'] font-normal text-base">
+                    {item.label}
+                  </span>
                 </div>
 
                 {!isCustomerCareOrServer && (

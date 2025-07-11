@@ -1,4 +1,4 @@
-// /app/api/admin/logs/route.ts
+// /app/api/admin/logs/route.js
 import { NextResponse } from "next/server";
 
 export async function GET() {

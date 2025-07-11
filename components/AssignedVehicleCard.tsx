@@ -15,14 +15,14 @@ const AssignedVehicleCard = () => {
   const v = vehicles[0];
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
-      <div className="shadow-[0px_6px_10px_0px_#BBBBBB40] p-4 sm:p-6 bg-white">
-        <div className="flex items-center justify-between mb-4">
+    <div className="w-full p-4 sm:px-6 lg:px-8">
+      <div className="shadow-[0px_6px_10px_0px_#BBBBBB40] p-4 sm:px-6 bg-white">
+        <div className="flex items-center justify-between ">
           <h2
-            className="text-[16px] font-medium leading-[100%] tracking-[-0.8px]"
+            className="text-[16px] font-medium leading-[100%] tracking-[-0.8px] pb-3"
             style={{ fontFamily: "Instrument Sans" }}
           >
-            Current Assigned Vehicle
+            Trip Assigned Vehicle
           </h2>
 
           <button className="px-4 py-2 text-xs  text-[#ffffff] bg-[#277A5F] rounded-md cursor-pointer font-['Instrument_Sans']">
@@ -31,22 +31,22 @@ const AssignedVehicleCard = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           {/* Image Section */}
-          <div className="flex-shrink-0 w-full md:w-[600px] bg-[#F7F7F7] rounded-md p-5 h-[338px]">
+          <div className="flex-shrink-0 w-full md:w-[500px] bg-[#F7F7F7] rounded-md px-5 h-[280px]">
             <Image
               src={selectedImage}
               alt="Assigned Car"
-              width={400} // natural width (can stay the same)
-              height={230} // reduced height
-              className="object-cover rounded w-full h-auto transform scale-x-[-1] mb-5 max-h-[230px]"
+              width={501} // natural width (can stay the same)
+              height={165} // reduced height
+              className="object-cover rounded w-full h-auto transform scale-x-[-1]  max-h-[230px] -mt-[16px]" // mb-5
             />
 
             {/* Thumbnail Switcher */}
-            <div className="mt-3 flex flex-col items-center">
+            <div className=" flex flex-col items-center">
               {/* Thumbnail + progress wrapper */}
-              <div className="relative w-full max-w-[50px] mb-2">
+              <div className="relative w-full max-w-[50px] ">
                 {/* Green progress bar */}
                 <div
-                  className="absolute top-0 h-[3px] bg-[#277A5F] transition-transform duration-300"
+                  className="absolute -top-5 h-[3px] bg-[#277A5F] transition-transform duration-300"
                   style={{
                     width: `${100 / carImages.length}%`,
                     transform: `translateX(${
@@ -80,7 +80,7 @@ const AssignedVehicleCard = () => {
           </div>
 
           {/* Details Section */}
-          <div className=" py-5 max-w-md mx-auto w-full pt-12 md:mt-3">
+          <div className="  mx-auto w-full pt-8 md:mt-3"> {/* max-w-md py-5*/}
             {/* Assigned Car Title */}
             <h3
               className="text-[25.52px] font-medium leading-[100%] tracking-[-0.51px] mb-1 text-black"
@@ -98,7 +98,7 @@ const AssignedVehicleCard = () => {
             </p>
 
             {/* Details Grid */}
-            <div className="flex flex-col sm:flex-row sm:gap-8 gap-4 pt-[60px]">
+            <div className="flex flex-col sm:flex-row sm:gap-8 gap-4 pt-[35px]">
               {/* Left: Energy + Ride Type */}
               <div className="flex-1 border-l-5 border-l-[#D9D9D9] pl-4">
                 <div>
@@ -152,7 +152,7 @@ const AssignedVehicleCard = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-2 ">
+        <div className="flex gap-2 mt-1 mb-4">
           {["Healthy", "100% Battery", "500KM"].map((label, index) => (
             <button
               key={index}

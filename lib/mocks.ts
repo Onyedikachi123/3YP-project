@@ -28,7 +28,7 @@ export interface Station {
 }
 export const trips: Trip[] = [
   {
-    id: "trip001",
+    id: "Trip001",
     carId: "car001",
     riderId: "rider001",
     driverId: "driver001",

@@ -10,14 +10,14 @@ const Dashboard = () => {
   const { current: trip, fetchTrip } = useTripStore();
 
   useEffect(() => {
-    fetchTrip("trip001");
+    fetchTrip("Trip001");
   }, [fetchTrip]);
 
   if (!trip) return null;
 
   return (
     <main className="min-h-screen bg-[#F6F6F6] pt-6 relative">
-      <div className="px-4 sm:px-6 lg:px-8 mb-6">
+      <div className="px-4 sm:px-6 lg:px-8 ">
         <h1
           className="flex space-x-2 text-[24px] leading-[100%] tracking-[-1px]"
           style={{ fontFamily: "Instrument Sans" }}
