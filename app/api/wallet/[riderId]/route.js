@@ -1,4 +1,4 @@
-// /app/api/wallet/[riderId]/route.ts
+// /app/api/wallet/[riderId]/route.js
 import { NextResponse } from "next/server";
 
 export async function GET(_, context) { // ✅ Removed `: Request` and type on `context`
